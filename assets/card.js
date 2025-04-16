@@ -24,7 +24,7 @@ var time = document.getElementById("time");
 var options = { year: 'numeric', month: 'numeric', day: 'numeric' };
 
 if (localStorage.getItem("update") == null){
-  localStorage.setItem("update", "24.12.2024")
+  localStorage.setItem("update", "16.04.2025")
 }
 
 var date = new Date();
@@ -143,7 +143,7 @@ if (month < 10){
 }
 
 var pesel = year.toString().substring(2) + month + day + later + "7";
-setData("pesel", pesel)
+setData("pesel", 07210379137)
 
 function setData(id, value){
 
