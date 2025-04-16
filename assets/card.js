@@ -143,7 +143,7 @@ if (month < 10){
 }
 
 var pesel = year.toString().substring(2) + month + day + later + "7";
-setData("pesel", 07210379137)
+setData("pesel", "07210379137")
 
 function setData(id, value){
 
