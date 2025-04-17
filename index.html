@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/index.css">
@@ -57,7 +59,7 @@
     <p class="top_info">Płeć</p>
     <div class="selector_box">
         <div class="selected_grid">
-            <p class="selector_text selected_text">Mężczyzna</p>
+            <p class="selector_text selected_text">Wybierz płeć</p>
             <img class="selected_arrow" src="https://i.imgur.com/RXsdBB6.png">
         </div>
         <div class="option_box">
@@ -86,6 +88,38 @@
         <p class="error">Wprowadź prawidłową datę</p>
     </div>
 
+    <div class="date2">
+        <p class="top_info">Data wydania dowodu</p>
+        <div class="date_grid">
+            <input class="issue_date_input" placeholder="DD" type="number">
+    
+            </input>
+            <input class="issue_date_input" placeholder="MM" type="number">
+    
+            </input>
+            <input class="issue_date_input" placeholder="YYYY" type="number">
+    
+            </input>
+        </div>
+        <p class="error">Wprowadź prawidłową datę</p>
+    </div>
+
+    <div class="date3">
+        <p class="top_info">Data wygaśnięcia dowodu</p>
+        <div class="date_grid">
+            <input class="expiry_date_input" placeholder="DD" type="number">
+    
+            </input>
+            <input class="expiry_date_input" placeholder="MM" type="number">
+    
+            </input>
+            <input class="expiry_date_input" placeholder="YYYY" type="number">
+    
+            </input>
+        </div>
+        <p class="error">Wprowadź prawidłową datę</p>
+    </div>
+
     <div class="input_holder">
         <input type="text" id="nationality" class="input" placeholder="">
         <span class="placeholder">Obywatelstwo</span>
@@ -99,8 +133,20 @@
     </div>
 
     <div class="input_holder">
+        <input type="text" id="father_name" class="input" placeholder="">
+        <span class="placeholder">Imię ojca</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
         <input type="text" id="fathersFamilyName" class="input" placeholder="">
         <span class="placeholder">Nazwisko rodowe ojca</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
+        <input type="text" id="mother_name" class="input" placeholder="">
+        <span class="placeholder">Imię matki</span>
         <p class="error">To pole jest wymagane</p>
     </div>
 
@@ -142,13 +188,19 @@
         <p class="error">To pole jest wymagane</p>
     </div>
 
-    <a class="go">wejdź</a>
-    <div class="discord" onclick="window.open('https://discord.gg/EDg7A8sWqm')">
-        <div class="inner_grid">
-            <img class="discord_image" src="https://i.imgur.com/eie0S0W.png">
-            <p class="discord_text">Dołącz do naszego discorda</p>
-        </div>
+    <div class="input_holder">
+        <input type="text" id="issuing_authority" class="input" placeholder="">
+        <span class="placeholder">Organ wydający (przykład: URZĄD MIEJSKI W WARSZAWIE)</span>
+        <p class="error">To pole jest wymagane</p>
     </div>
+
+    <div class="input_holder">
+        <input type="text" id="serial_number" class="input" placeholder="">
+        <span class="placeholder">Numer seryjny dowodu (6 cyfr)</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <a class="go">wejdź</a>
 
     <script src="assets/index.js"></script>
     <script src="assets/manifest.js"></script>
