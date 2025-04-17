@@ -111,8 +111,8 @@ setData("issuing_authority2", data["issuing_authority"].toUpperCase());
 setData("expiry_date2", data["expiry_date"]);
 
 setData("issue_date", data["issue_date"]);
-setData("father_name", data["father_name"]);
-setData("mother_name", data["mother_name"]);
+setData("father_name", data["father_name"].toUpperCase());
+setData("mother_name", data["mother_name"].toUpperCase());
 
 if (localStorage.getItem("homeDate") == null){
   let homeDay = getRandom(1, 25);
