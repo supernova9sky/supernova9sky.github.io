@@ -40,9 +40,9 @@ async function log_in(password) {
 document.querySelector(".welcome").innerHTML = create_welcome_text(new Date());
 
 let password_element = document.querySelector(".password_input");
-let dot = "•";
+//let dot = "•";
 let uncensored_password = "";
-let eye = document.querySelector(".eye");
+//let eye = document.querySelector(".eye");
 
 password_element.addEventListener("keydown", (event) => {
     if ((event.key === 'Enter') && (window.matchMedia('(display-mode: standalone)').matches)) {
@@ -76,17 +76,17 @@ document.querySelector(".login").addEventListener('click', () => {
         log_in(uncensored_password);
 });
 
-eye.addEventListener('click', () => {
-    var classlist = eye.classList;
-    if (classlist.contains("eye_close")) {
-        classlist.remove("eye_close");
-        var dots = "";
-        for (var i = 0; i < password_element.value.length - 1; i++) {
-            dots = dots + dot
-        }
-        password_element.value = dots;
-    } else {
-        classlist.add("eye_close");
-        password_element.value = uncensored_password;
-    }
-})
+// eye.addEventListener('click', () => {
+//     var classlist = eye.classList;
+//     if (classlist.contains("eye_close")) {
+//         classlist.remove("eye_close");
+//         var dots = "";
+//         for (var i = 0; i < password_element.value.length - 1; i++) {
+//             dots = dots + dot
+//         }
+//         password_element.value = dots;
+//     } else {
+//         classlist.add("eye_close");
+//         password_element.value = uncensored_password;
+//     }
+// })
