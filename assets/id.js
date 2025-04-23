@@ -52,22 +52,23 @@ password_element.addEventListener("keydown", (event) => {
 })
 
 password_element.addEventListener("input", () => {
-    let password = password_element.value.toString();
-    let password_lenght = password.length;
-    let last_char_typed = password.at(-1);
+    // let password = password_element.value.toString();
+    // let password_lenght = password.length;
+    // let last_char_typed = password.at(-1);
 
-    uncensored_password += last_char_typed;
+    // uncensored_password += last_char_typed;
+    uncensored_password = password_element.value.toString();
 
-    if (!eye.classList.contains("eye_close")) {
-        if (password_lenght !== 0) {
-            let dots = dot.repeat(password_lenght - 1);
-        password_element.value = dots + last_char_typed;
-        delay(3000).then(() => {
-            password_element.value = dot.repeat(password_element.value.toString().length);
-        })
-        }
-        //console.log(uncensored_password);
-    }
+    // if (!eye.classList.contains("eye_close")) {
+    //     if (password_lenght !== 0) {
+    //         let dots = dot.repeat(password_lenght - 1);
+    //     password_element.value = dots + last_char_typed;
+    //     delay(3000).then(() => {
+    //         password_element.value = dot.repeat(password_element.value.toString().length);
+    //     })
+    //     }
+    //     //console.log(uncensored_password);
+    // }
 })
 
 document.querySelector(".login").addEventListener('click', () => {
