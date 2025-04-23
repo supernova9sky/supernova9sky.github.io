@@ -29,6 +29,7 @@
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
+    padding: 0 15px;
 }
 
 .password_text{
@@ -42,7 +43,7 @@
 
 .input_holder{
     position: relative;
-    width: 100%;
+    width: 95%;
     display: flex;
     align-items: center;
 }
