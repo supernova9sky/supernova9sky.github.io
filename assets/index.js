@@ -39,43 +39,6 @@ document.querySelectorAll(".input_holder").forEach((element) => {
 
 });
 
-upload.addEventListener('click', () => {
-    imageInput.click();
-    upload.classList.remove("error_shown")
-});
-
-imageInput.addEventListener('change', (event) => {
-
-    upload.classList.remove("upload_loaded");
-    upload.classList.add("upload_loading");
-
-    upload.removeAttribute("selected")
-
-    let file = imageInput.files[0];
-    let data = new FormData();
-    data.append("image", file);
-
-    fetch('	https://api.imgur.com/3/image', {
-        method: 'POST',
-        headers: {
-            'Authorization': 'Client-ID 546c25a59c58ad7'
-        },
-        body: data
-    })
-        .then(result => result.json())
-        .then(response => {
-
-            let url = response.data.link;
-            upload.classList.remove("error_shown")
-            upload.setAttribute("selected", url);
-            upload.classList.add("upload_loaded");
-            upload.classList.remove("upload_loading");
-            upload.querySelector(".upload_uploaded").src = url;
-
-        })
-
-})
-
 function check_date(date_arr) {
     let split_arr = date_arr.split(".");
     
@@ -101,12 +64,6 @@ document.querySelector(".go").addEventListener('click', () => {
     let params = new URLSearchParams();
 
     params.set("sex", sex)
-    if (!upload.hasAttribute("selected")) {
-        empty.push(upload);
-        upload.classList.add("error_shown")
-    } else {
-        params.set("image", upload.getAttribute("selected"))
-    }
 
     let birthday = [];
     document.querySelectorAll(".date_input").forEach((element) => {
@@ -181,7 +138,7 @@ function isEmpty(value) {
 
 function forwardToId(params) {
 
-    location.href = "/id?" + params
+    location.href = "/id.html?" + params
 
 }
 
