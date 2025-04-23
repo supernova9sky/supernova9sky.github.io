@@ -24,12 +24,12 @@
     grid-auto-flow: row;
     grid-auto-rows: max-content;
     height: max-content;
-    width: 98%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    padding: 0 15px;
+    padding: 0 19px;
 }
 
 .password_text{
@@ -43,7 +43,7 @@
 
 .input_holder{
     position: relative;
-    width: 95%;
+    width: 92%;
     display: flex;
     align-items: center;
 }
