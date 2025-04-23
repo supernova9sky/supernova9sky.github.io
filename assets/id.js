@@ -6,6 +6,10 @@ function create_welcome_text(date) {
     return (date.getHours() >= 18) ? "Dobry wieczór!" : "Dzień dobry!";
 }
 
+function toHome(){
+    location.href = '/home.html?' + new URLSearchParams(window.location.search);
+}
+
 function loadFile(filePath) {
     var result = null;
     var xmlhttp = new XMLHttpRequest();
