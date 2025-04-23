@@ -7,22 +7,28 @@
 }
 
 .password_box{
- width: calc(100% - 10px); /* Subtract some pixels to ensure it stays within bounds */
-  max-width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: white;
-  border-radius: 20px;
-  margin: 0 auto;
+    width: 97%;
+    margin-top: 20px;
+    height: 165px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
 }
 
 .password_grid{
- width: calc(100% - 10px); /* Subtract some pixels to ensure it stays within bounds */
-  box-sizing: border-box;
-  padding: 12px 15px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content;
+    height: max-content;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .password_text{
@@ -35,8 +41,10 @@
 }
 
 .input_holder{
-     width: 97%; /* Subtract some pixels to ensure it stays within bounds */
     position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .eye{
