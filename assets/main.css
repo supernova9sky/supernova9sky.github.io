@@ -3,14 +3,14 @@
 :root{
     --home: url('images/pulpit_nie_aktywny.svg');
     --home-open: url('images/pulpit_aktywny.svg');
-    --documents: url('images/pulpit_nie_aktywny.svg');
-    --documents-open: url('images/pulpit_nie_aktywny.svg');
-    --services: url('images/pulpit_nie_aktywny.svg');
-    --services-open: url('images/pulpit_nie_aktywny.svg');
-    --qr: url('images/pulpit_nie_aktywny.svg');
-    --qr-open: url('images/pulpit_nie_aktywny.svg');
-    --more: url('images/pulpit_nie_aktywny.svg');
-    --more-open: url('images/pulpit_nie_aktywny.svg');
+    --documents: url('images/dokumenty_nie_aktywne.svg');
+    --documents-open: url('images/dokumenty_aktywne.svg');
+    --services: url('images/uslugi_nie_aktywne.svg');
+    --services-open: url('images/uslugi_aktywne.svg');
+    --qr: url('images/kod_qr_nie_aktywny.svg');
+    --qr-open: url('images/kod_qr_aktywny.svg');
+    --more: url('images/wiecej_nie_aktywne.svg');
+    --more-open: url('images/wiecej_aktywne.svg');
     --text: #024b97;
     --shadow: 0px 0px 10px rgb(224, 224, 224);
 }
