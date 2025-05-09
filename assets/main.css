@@ -49,7 +49,7 @@ p, input{
     padding-left: 15px;
     padding-right: 15px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     height: 32px;
     margin-top: auto;
     margin-bottom: auto;
@@ -127,7 +127,7 @@ p, input{
 }
 
 .bottom_bar_grid{
-    display: grid;                 /* Use grid layout inside the bottom bar */
+    display: grid;         
     grid-template-columns: repeat(5, 1fr);
 
     margin-top: 4px;
