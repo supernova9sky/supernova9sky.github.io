@@ -215,17 +215,17 @@ body .bottom_bar{
     font-size: 18px;
 }
 
-/* .action_arrow{
+.action_arrow{
     position: absolute;
     top: 0;
     bottom: 0;
     right: 20px;
-    width: 20px;
+    width: 10px;
     order: 100;
     margin-top: auto;
     margin-bottom: auto;
     transition: 200ms;
-} */
+}
 
 .id_bottom{
     box-shadow: var(--shadow);
@@ -310,7 +310,7 @@ body .bottom_bar{
 }
 
 .info_holder .action_arrow{
-    rotate: 90deg;
+    rotate: 0deg;
     top: 27px;
     bottom: auto;
 }
@@ -321,7 +321,7 @@ body .bottom_bar{
 }
 
 .unfolded .action_arrow{
-    rotate: 270deg;
+    rotate: 90deg;
 }
 
 .additional_title{
