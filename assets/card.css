@@ -226,13 +226,11 @@ body .bottom_bar{
     margin-right: auto;
 }
 
-.back_text{
-    color: #014A93;
-    font-weight: 500;
-    font-size: 18px;
-    height: max-content;
-    margin-top: auto;
-    margin-bottom: auto;
+.back_img {
+  width: 60px; /* Increase this value to make it bigger */
+  height: auto; /* Maintain aspect ratio */
+  padding: 10px; /* Add padding around the element */
+  font-size: 18px; /* If there's text inside the SVG */
 }
 
 .help_img{
