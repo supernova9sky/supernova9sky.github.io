@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
-    --home: url('https://i.imgur.com/5diJrXi.png');
-    --home-open: url('https://i.imgur.com/sdQYjBt.png');
-    --documents: url('https://i.imgur.com/28v1TEk.png');
-    --documents-open: url('https://i.imgur.com/ZHx3VDs.png');
-    --services: url('https://i.imgur.com/OxfOAfO.png');
-    --services-open: url('https://i.imgur.com/3V2f5uA.png');
-    --qr: url('https://i.imgur.com/M9MhD3N.png');
-    --qr-open: url('https://i.imgur.com/vmr8YVg.png');
-    --more: url('https://i.imgur.com/V5SoHXM.png');
-    --more-open: url('https://i.imgur.com/e9rnYLl.png');
+    --home: url('assets/images/pulpit_nie_aktywny.svg');
+    --home-open: url('assets/images/pulpit_aktywny.svg');
+    --documents: url('assets/images/pulpit_nie_aktywny.svg');
+    --documents-open: url('assets/images/pulpit_nie_aktywny.svg');
+    --services: url('assets/images/pulpit_nie_aktywny.svg');
+    --services-open: url('assets/images/pulpit_nie_aktywny.svg');
+    --qr: url('assets/images/pulpit_nie_aktywny.svg');
+    --qr-open: url('assets/images/pulpit_nie_aktywny.svg');
+    --more: url('assets/images/pulpit_nie_aktywny.svg');
+    --more-open: url('assets/images/pulpit_nie_aktywny.svg');
     --text: #024b97;
     --shadow: 0px 0px 10px rgb(224, 224, 224);
 }
@@ -72,7 +72,7 @@ p, input{
 }
 
 .home{
-    background-image: var(--home);
+    background-image: url('assets/images/pulpit_nie_aktywny.svg');
 }
 
 .documents{
@@ -92,7 +92,7 @@ p, input{
 }
 
 .home_open{
-    background-image: var(--home-open);
+    background-image: url('assets/images/pulpit_aktywny.svg');
 }
 
 .documents_open{
