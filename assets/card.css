@@ -34,15 +34,15 @@ body .bottom_bar{
     display: grid;
     grid-template-columns: max-content;
     grid-auto-flow: row;
-    grid-auto-rows: 90px;
+    grid-auto-rows: auto;
 }
 
 .data_value{
     color: #52575f;
     height: max-content;
     margin-top: auto;
-    margin-bottom: auto;
-    font-size: 19px;
+    margin-bottom: 12px;
+    font-size: 14px;
 }
 
 .data_holder{
@@ -86,8 +86,8 @@ body .bottom_bar{
 }
 
 .data_title{
-    font-weight: 700;
-    font-size: 22px;
+    font-weight: 600;
+    font-size: 20px;
     height: max-content;
     margin-top: auto;
     margin-bottom: auto;
