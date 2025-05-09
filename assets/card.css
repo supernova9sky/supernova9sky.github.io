@@ -67,6 +67,18 @@ body .bottom_bar{
     width: 20%;
 }
 
+.eagle_text{
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: 0px;
+    margin-bottom: auto;
+    height: max-content;
+    line-height: 17px;
+    margin-left: 1px;
+    color: gray;
+}
+
+
 .eagle_video{
     position: absolute;
     top: 66.1%;
