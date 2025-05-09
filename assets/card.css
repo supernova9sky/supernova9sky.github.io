@@ -107,7 +107,7 @@ body .bottom_bar{
     z-index: -1;
     pointer-events: none;
     box-shadow: var(--shadow);
-    clip-path: inset(-10px -10px 65px -10px);
+    clip-path: inset(-10px -10px 63.5px -10px);
     border-radius: 15px 15px 0px 0px;
 }
 
