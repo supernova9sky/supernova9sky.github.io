@@ -34,7 +34,7 @@ body .bottom_bar{
     display: grid;
     grid-template-columns: max-content;
     grid-auto-flow: row;
-    grid-auto-rows: auto;
+    grid-auto-rows: 80px;
 }
 
 .data_value{
