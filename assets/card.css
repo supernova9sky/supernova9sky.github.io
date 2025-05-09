@@ -41,8 +41,8 @@ body .bottom_bar{
     color: #52575f;
     height: max-content;
     margin-top: auto;
-    margin-bottom: 12px;
-    font-size: 14px;
+    margin-bottom: 16px;
+    font-size: 16px;
 }
 
 .data_holder{
@@ -86,8 +86,8 @@ body .bottom_bar{
 }
 
 .data_title{
-    font-weight: 600;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 22px;
     height: max-content;
     margin-top: auto;
     margin-bottom: auto;
