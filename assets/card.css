@@ -227,7 +227,7 @@ body .bottom_bar{
 }
 
 .back_img{
-    width: 50px;
+    width: max-content;
     margin-right: 10px;
     margin-left: auto;
     margin-top: auto;
