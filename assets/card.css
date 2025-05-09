@@ -292,13 +292,13 @@ body .bottom_bar{
 }
 
 .info_holder .bottom_grid{
-    height: 70px;
+    height: 80px;
 }
 
 .info_holder{
     height: unset;
     transition: 200ms;
-    max-height: 70px;
+    max-height: 80px;
 }
 
 .additional_holder{
