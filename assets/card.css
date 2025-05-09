@@ -32,9 +32,9 @@ body .bottom_bar{
     top: 18px;
     left: 50%;
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: max-content;
     grid-auto-flow: row;
-    grid-auto-rows: 70px;
+    grid-auto-rows: 90px;
 }
 
 .data_value{
@@ -42,7 +42,7 @@ body .bottom_bar{
     height: max-content;
     margin-top: auto;
     margin-bottom: auto;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .data_holder{
@@ -86,8 +86,8 @@ body .bottom_bar{
 }
 
 .data_title{
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 22px;
     height: max-content;
     margin-top: auto;
     margin-bottom: auto;
