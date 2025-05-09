@@ -41,7 +41,7 @@ body .bottom_bar{
     color: #52575f;
     height: max-content;
     margin-top: auto;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
     font-size: 15px;
 }
 
@@ -69,7 +69,7 @@ body .bottom_bar{
 
 .eagle_text{
     font-size: 14px;
-    font-weight: 200;
+    font-weight: 300;
     margin-top: 0px;
     margin-bottom: auto;
     height: max-content;
