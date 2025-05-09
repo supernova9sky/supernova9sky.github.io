@@ -55,14 +55,14 @@ body .bottom_bar{
 
 .flag_video{
     position: absolute;
-    top: 50.5%;
+    top: 49.5%;
     left: 7.5%;
     width: 18.9%;
 }
 
 .eagle_text{
     position: absolute;
-    top: 68.1%;
+    top: 65.5%;
     left: 18%;
     width: 20%;
 }
@@ -78,10 +78,9 @@ body .bottom_bar{
     color: gray;
 }
 
-
 .eagle_video{
     position: absolute;
-    top: 66.1%;
+    top: 64.1%;
     left: 7.7%;
     width: 8.8%;
 }
@@ -103,11 +102,12 @@ body .bottom_bar{
     width: 95%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: -65px;
     display: block;
     z-index: -1;
     pointer-events: none;
     box-shadow: var(--shadow);
-    clip-path: inset(-10px -10px 0px -10px);
+    clip-path: inset(-10px -10px 65px -10px);
     border-radius: 15px 15px 0px 0px;
 }
 
