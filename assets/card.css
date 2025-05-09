@@ -203,7 +203,7 @@ body .bottom_bar{
     font-size: 18px;
 }
 
-.action_arrow{
+/* .action_arrow{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -213,7 +213,7 @@ body .bottom_bar{
     margin-top: auto;
     margin-bottom: auto;
     transition: 200ms;
-}
+} */
 
 .id_bottom{
     box-shadow: var(--shadow);
@@ -226,11 +226,13 @@ body .bottom_bar{
     margin-right: auto;
 }
 
-.back_img {
-  width: 60px; /* Increase this value to make it bigger */
-  height: auto; /* Maintain aspect ratio */
-  padding: 10px; /* Add padding around the element */
-  font-size: 18px; /* If there's text inside the SVG */
+.back_img{
+    width: 30px;
+    margin-right: 10px;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
 }
 
 .help_img{
