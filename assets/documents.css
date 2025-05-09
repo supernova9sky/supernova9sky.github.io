@@ -42,15 +42,16 @@
 }
 
 .human{
+    width: 25px;
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: 20px;
+    margin-left: auto;
     margin-right: auto;
 }
 
 .arrow{
     margin-left: auto;
-    width: 25px;
+    width: 10px !important;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 15px !important;
