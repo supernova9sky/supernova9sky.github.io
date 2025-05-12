@@ -1,0 +1,226 @@
+body .bottom_bar {
+  z-index: 2;
+}
+
+.upper_bar {
+  z-index: 2;
+  display: grid;
+  background-color: #f5f6fb;
+  position: fixed;
+  height: 60px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  top: 0px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100%;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.upper_bar .back_holder {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.upper_bar .back_holder .back {
+  width: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.upper_bar .back_holder .back_title {
+  color: #2d588b;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.upper_bar .title {
+  font-size: 18px;
+  width: max-content;
+  color: #3b3c41;
+  text-align: center;
+  font-weight: bold;
+}
+
+.upper_bar .help {
+  width: max-content;
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+.upper_info {
+  margin-top: 75px;
+  display: flex;
+  height: 100px;
+  width: 100%;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+.upper_info .big_text {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  width: 500px;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.upper_info .small_text {
+  width: 480px;
+  font-size: 19px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.content_holder {
+  position: relative;
+  margin-top: 80px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.content_holder .info {
+  width: 95%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.content_holder .info .element {
+  width: 90%;
+  margin-left: 25px;
+  border-bottom: 2px solid rgb(200, 200, 200);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: column;
+}
+
+.content_holder .info .element .text {
+  grid-column: 1;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  height: max-content;
+  color: #1f2125;
+}
+
+.content_holder .info .element .value {
+  font-size: 22px;
+  font-weight: 550;
+  margin-bottom: 15px;
+  margin-top: -2px;
+}
+
+.content_holder .info .element .value_serial {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: -5px;
+}
+
+.content_holder .info .element .button {
+  grid-row: 1 / 3;
+  margin-right: 5px;
+}
+
+.content_holder .info .element .is_issued {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  margin-top: -15px;
+}
+
+.content_holder .info .element .is_issued .icon {
+  width: 25px;
+}
+
+.content_holder .info .element .is_issued .value {
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.content_holder .last_refresh_holder {
+  width: 95%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: column;
+}
+
+.content_holder .last_refresh_holder .text {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 25px;
+  font-size: 18px;
+}
+
+.content_holder .last_refresh_holder .value {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  margin-left: 25px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.content_holder .last_refresh_holder .button {
+  grid-row: 1 / 3;
+  margin-right: 20px;
+}
+
+.content_holder .change_pin {
+  display: flex;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  margin-bottom: 120px;
+  width: 95%;
+  height: max-content;
+  align-items: center;
+}
+
+.content_holder .change_pin .change_pin_icon {
+  width: 55px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.content_holder .change_pin .change_pin_text {
+  font-size: 18px;
+  font-weight: 600;
+  width: 300px;
+}
+
+.content_holder .change_pin .change_pin_arrow {
+  width: 25px;
+  margin-right: 25px;
+  margin-left: auto;
+}

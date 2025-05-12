@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>mObywatel</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="assets/id_data.css?v=1.0">
+  <link rel="stylesheet" href="assets/main.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo_appki.svg">
+  <link rel="apple-touch-icon" href="assets/images/logo_appki.svg">
+  <link rel="shortcut icon" href="assets/images/logo_appki.svg">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+  <div class="upper_bar">
+    <div class="back_holder" onclick="history.back()">
+      <img src="assets/images/wroc_strzalka.svg" class="back" loading="lazy">
+      <p class="back_title">Wróć</p>
+    </div>
+    <p class="title">Dane dowodu osobistego</p>
+    <img src="assets/images/pomoc.svg" class="help" loading="lazy">
+  </div>
+
+  <div class="content_holder">
+    <div class="info">
+      <div class="element">
+        <p class="text">Seria i numer</p>
+        <p id="serial_number2" class="value_serial">ZZC 000000</p>
+        <button class="button copy" onclick="copy_serial()">Kopiuj</button>
+      </div>
+      <div class="element">
+        <p class="text">Status</p>
+        <div class="is_issued">
+          <img class="icon" src="assets/images/dowod_wydany.svg">
+          <p class="value">Wydany</p>
+        </div>
+      </div>
+      <div class="element">
+        <p class="text">Organ wydający</p>
+        <p id="issuing_authority" class="value">URZĄD MIASTA WARSZAWA</p>
+      </div>
+      <div class="element">
+        <p class="text">Termin ważności</p>
+        <p id="expiry_date" class="value">01.01.2011</p>
+      </div>
+      <div class="element" style="border-bottom: none;">
+        <p class="text">Data wydania</p>
+        <p id="issue_date" class="value">01.01.2001</p>
+      </div>
+    </div>
+    <div class="last_refresh_holder" onclick="scroll(0, 0)">
+      <p class="text">Ostatnia aktualizacja</p>
+      <p class="value">01.01.2001</p>
+      <button class="button update">Aktualizuj</button>
+    </div>
+    <div class="change_pin">
+      <img class="change_pin_icon" src="assets/images/zmien_pin.svg">
+      <p class="change_pin_text">Zmień PIN do podpisu osobistego</p>
+      <img class="change_pin_arrow" src="assets/images/strzalka_szara_prawo.svg">
+    </div>
+  </div>
+
+  <div class="bottom_bar">
+    <div class="bottom_bar_grid">
+      <div class="bottom_element_grid" send="pM9exZEim1ZRS8YW">
+        <div class="bottom_element_image home"></div>
+        <p class="bottom_element_text">Pulpit</p>
+      </div>
+      <div class="bottom_element_grid" send="documents">
+        <div class="bottom_element_image documents_open"></div>
+        <p class="bottom_element_text open">Dokumenty</p>
+      </div>
+      <div class="bottom_element_grid" send="services">
+        <div class="bottom_element_image services"></div>
+        <p class="bottom_element_text">Usługi</p>
+      </div>
+      <div class="bottom_element_grid" send="qr">
+        <div class="bottom_element_image qr"></div>
+        <p class="bottom_element_text">Kod QR</p>
+      </div>
+      <div class="bottom_element_grid" send="more">
+        <div class="bottom_element_image more"></div>
+        <p class="bottom_element_text">Więcej</p>
+      </div>
+    </div>
+  </div>
+  <script src="assets/id_data.js"></script>
+  <script src="assets/bar.js"></script>
+  <script src="assets/manifest.js"></script>
+</body>
+
+</html>

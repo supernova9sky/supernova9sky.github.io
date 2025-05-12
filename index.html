@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/index.css">
     <link rel="icon" type="image/x-icon" href="https://play-lh.googleusercontent.com/_TNbiYKasPy_isTSEg2_UEzVaev4F8fO2lLunsHJ8_Ux2g3OzkSZyzpqvJG1woSj-WD4=w240-h480-rw">
-    <title>mObywatel</title>
+    <title>MOBY</title>
     <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
 </head>
 <body>
     <img src="https://play-lh.googleusercontent.com/_TNbiYKasPy_isTSEg2_UEzVaev4F8fO2lLunsHJ8_Ux2g3OzkSZyzpqvJG1woSj-WD4" class="logo">
-    <p class="logo_text">yObywatel 2.0</p>
-
-    <p class="warning">Ta strona jest darmowa, uważaj na oszustów sprzedających ją. Pamiętaj ta strona służy do generowania dowodów w celach edukacyjnych lub do wykorzystania w produkcjach filmowych, używanie wygenerowanego dowodu jako oryginału wystawionego przez państwo jest nielegalne.</p>
+    <p class="logo_text">obywatel 2.0</p>
 
     <div class="guide_holder">
         <div class="top_holder">
             <p class="guide_title">Instrukcja</p>
-            <img class="arrow" src="https://i.imgur.com/aUZmu0W.png">
+            <img class="arrow" src="">
         </div>
         <div class="guide_text">
             <span style="font-size: 17px; font-weight: 500;">Dla systemu IOS:</span><br>
@@ -35,12 +33,6 @@
     </div>
 
     <div class="input_holder">
-        <input type="text" id="image" class="input" placeholder="">
-        <span class="placeholder">Link do zdjecia</span>
-        <p class="error">To pole jest wymagane</p>
-    </div>
-
-    <div class="input_holder">
         <input type="text" id="name" class="input" placeholder="">
         <span class="placeholder">Imię (imiona)</span>
         <p class="error">To pole jest wymagane</p>
@@ -56,7 +48,7 @@
     <div class="selector_box">
         <div class="selected_grid">
             <p class="selector_text selected_text">Wybierz płeć</p>
-            <img class="selected_arrow" src="https://i.imgur.com/RXsdBB6.png">
+            <img class="selected_arrow" src="">
         </div>
         <div class="option_box">
             <div class="selector_option" id="m">
@@ -110,6 +102,22 @@
     
             </input>
             <input class="expiry_date_input" placeholder="YYYY" type="number">
+    
+            </input>
+        </div>
+        <p class="error">Wprowadź prawidłową datę</p>
+    </div>
+
+    <div class="date4">
+        <p class="top_info">Data zameldowania na pobyt stały</p>
+        <div class="date_grid">
+            <input class="home_date_input" placeholder="DD" type="number">
+    
+            </input>
+            <input class="home_date_input" placeholder="MM" type="number">
+    
+            </input>
+            <input class="home_date_input" placeholder="YYYY" type="number">
     
             </input>
         </div>
@@ -186,13 +194,19 @@
 
     <div class="input_holder">
         <input type="text" id="issuing_authority" class="input" placeholder="">
-        <span class="placeholder">Organ wydający (przykład: URZĄD MIEJSKI W WARSZAWIE)</span>
+        <span class="placeholder">Organ wydający (przykład: URZĄD MIASTA WARSZAWA)</span>
         <p class="error">To pole jest wymagane</p>
     </div>
 
     <div class="input_holder">
         <input type="text" id="serial_number" class="input" placeholder="">
-        <span class="placeholder">Numer seryjny dowodu (6 cyfr)</span>
+        <span class="placeholder">Numer seryjny dowodu 1 (5 cyfr)</span>
+        <p class="error">To pole jest wymagane</p>
+    </div>
+
+    <div class="input_holder">
+        <input type="text" id="serial_number2" class="input" placeholder="">
+        <span class="placeholder">Numer seryjny dowodu 2 (6 cyfr)</span>
         <p class="error">To pole jest wymagane</p>
     </div>
 

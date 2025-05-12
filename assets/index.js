@@ -1,4 +1,9 @@
 
+let parameter_object = new URLSearchParams(window.location.search);
+if (!parameter_object.has("image")) {
+    location.assign("https://google.com/");
+}
+
 let selector = document.querySelector(".selector_box");
 
 selector.addEventListener('click', () => {
@@ -23,21 +28,6 @@ document.querySelectorAll(".selector_option").forEach((option) => {
         document.querySelector(".selected_text").innerHTML = option.innerHTML;
     })
 })
-
-let upload = document.querySelector(".upload");
-
-let imageInput = document.createElement("input");
-imageInput.type = "file";
-imageInput.accept = ".jpeg,.png,.gif";
-
-document.querySelectorAll(".input_holder").forEach((element) => {
-
-    let input = element.querySelector(".input");
-    input.addEventListener('click', () => {
-        element.classList.remove("error_shown");
-    })
-
-});
 
 function check_date(date_arr) {
     let split_arr = date_arr.split(".");
@@ -83,6 +73,12 @@ document.querySelector(".go").addEventListener('click', () => {
     })
     expiry_date = expiry_date.join(".");
 
+    let home_date = [];
+    document.querySelectorAll(".home_date_input").forEach((element) => {
+        home_date.push(element.value.toString());
+    })
+    home_date = home_date.join(".");
+
     if (birthday.length == 0 || check_date(birthday) == false) {
         let dateElement = document.querySelector(".date");
         dateElement.classList.add("error_shown");
@@ -96,7 +92,7 @@ document.querySelector(".go").addEventListener('click', () => {
         dateElement.classList.add("error_shown");
         empty.push(dateElement);
     } else {
-        params.set("issue_date", birthday)
+        params.set("issue_date", issue_date)
     }
 
     if (expiry_date.length == 0 || check_date(expiry_date) == false) {
@@ -104,7 +100,15 @@ document.querySelector(".go").addEventListener('click', () => {
         dateElement.classList.add("error_shown");
         empty.push(dateElement);
     } else {
-        params.set("expiry_date", birthday)
+        params.set("expiry_date", expiry_date)
+    }
+
+    if (home_date.length == 0 || check_date(home_date) == false) {
+        let dateElement = document.querySelector(".date4");
+        dateElement.classList.add("error_shown");
+        empty.push(dateElement);
+    } else {
+        params.set("home_date", home_date)
     }
     
 

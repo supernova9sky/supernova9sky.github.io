@@ -12,90 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
 </head>
-<body>
-    <div class="top_grid">
-        <div class="action_grid">
-            <img src="assets/images/wroc.svg" class="back_img" onclick="sendTo('pM9exZEim1ZRS8YW')">
-            <!-- <p  class="back_text"></p> -->
-        </div>
-        <p class="title_text">mDowód</p>
-        <img src="assets/images/pomoc.svg" class="help_img">
-    </div>
 
-    <div class="confirm">
-        <div class="opacity" onclick="closePage()"></div>
-        <div class="page_1 page">
-            <p class="confirm_title">Wybierz dokument</p>
-            <div class="confirm_list">
-                <div class="card card_1">
-                    <div class="card_inner">
-                        <p class="confirm_name">Dowód osobisty</p>
-                        <p class="confirm_description">Zobaczysz tutaj dane swojego dowodu osobistego. Ale jeśli chcesz potwierdzić tożsamość, potrzebujesz fizycznego dokumentu.</p>
-                        <p class="confirm_button" onclick="openPage(2)">Pokaż dane</p>
-                    </div>
-                </div>
-                <div class="card card_2">
-                    <div class="card_inner">
-                        <p class="confirm_name">mDowód</p>
-                        <p class="confirm_description">Nie używaj danych mDowodu w banku (do 31 sierpnia), gdy wyjeżdżasz za granicę lub składasz wniosek o dowód osobisty.</p>
-                        <p class="confirm_button" onclick="openPage(3)">Pokaż dane</p>
-                    </div>
-                </div>
-            </div>
-            <p class="confirm_close close_page_1" onclick="closePage()">Zamknij</p>
+<body>
+    <div class="upper_bar">
+        <div class="back_holder" onclick="sendTo('pM9exZEim1ZRS8YW')">
+            <img src="assets/images/wroc_strzalka.svg" class="back" loading="lazy">
+            <p class="back_title">Wróć</p>
         </div>
-        <div class="page page_2 page_other">
-            <p class="confirm_title">Dane dowodu osobistego</p>
-            <div class="confirm_info">
-                <div class="confirm_box">
-                    <p class="box_top">Seria i numer</p>
-                    <p class="box_value box_highlight" id="serial_number"></p>
-                    <button class="button">Kopiuj</button>
-                </div>
-                <div class="confirm_box">
-                    <p class="box_top">Organ wydający</p>
-                    <p class="box_value" id="issuing_authority"></p>
-                </div>
-                <div class="confirm_box">
-                    <p class="box_top">Termin ważności</p>
-                    <p class="box_value" id="expiry_date"></p>
-                </div>
-                <div class="confirm_box" style="border: none;">
-                    <p class="box_top">Termin wydania</p>
-                    <p class="box_value" id="issue_date"></p>
-                </div>
-            </div>
-            <p class="confirm_close close_page_2" onclick="closePage()">Zamknij</p>
-            <p class="confirm_back back" onclick="openPage(1)">Wróć</p>
-        </div>
-        <div class="page page_3 page_other">
-            <p class="confirm_title">Dane mDowodu</p>
-            <div class="confirm_info">
-                <div class="confirm_box">
-                    <p class="box_top">Seria i numer</p>
-                    <p class="box_value box_highlight" id="serial_number2"></p>
-                    <button class="button">Kopiuj</button>
-                </div>
-                <div class="confirm_box">
-                    <p class="box_top">Organ wydający</p>
-                    <p class="box_value" id="issuing_authority2"></p>
-                </div>
-                <div class="confirm_box">
-                    <p class="box_top">Termin ważności</p>
-                    <p class="box_value" id="expiry_date2"></p>
-                </div>
-                <div class="confirm_box">
-                    <p class="box_top">Imię ojca</p>
-                    <p class="box_value" id="father_name"></p>
-                </div>
-                <div class="confirm_box" style="border: none;">
-                    <p class="box_top">Imię matki</p>
-                    <p class="box_value" id="mother_name"></p>
-                </div>
-            </div>
-            <p class="confirm_close close_page_2" onclick="closePage()">Zamknij</p>
-            <p class="confirm_back back" onclick="openPage(1)">Wróć</p>
-        </div>
+        <p class="title">mDowód</p>
+        <img src="assets/images/pomoc.svg" class="help" loading="lazy">
     </div>
 
     <div class="bottom_bar">
@@ -122,108 +47,132 @@
             </div>
         </div>
     </div>
-    <p class="time_text" id="time"></p>
-    <div class="id_image_data">
-        <img draggable="false" class="id_image" src="assets/images/dowod_tlo.png">
+    <p class="time" id="time">Czas: 00:00:00 01.01.2000</p>
+    <div class="id">
+        <img draggable="false" class="image" src="assets/images/dowod_tlo.png" loading="lazy">
         <div class="inset">
 
         </div>
-        <div class="id_own_image" style="background-image: url('assets/images/dowod_tlo.png');"></div>
-        <img draggable="false" src="assets/images/polish_flag.gif" class="flag_video">
-        <img draggable="false" src="assets/images/godlo_hologram.gif" class="eagle_video">
+        <div class="user_image" style="background-image: url('assets/images/dowod_tlo.png');"></div>
+        <img draggable="false" src="assets/images/polish_flag.gif" class="flag_video" loading="lazy">
+        <img draggable="false" src="assets/images/godlo_hologram.gif" class="eagle_video" loading="lazy">
         <p class="eagle_text">Rzeczpospolita<br>Polska</p>
-        <div class="id_data_grid">
-            <div class="data_holder">
-                <p class="data_title firstname" id="name"></p>
-                <p class="data_value">Imię (imiona)</p>
+        <div class="data_grid">
+            <div class="element">
+                <p class="value" id="name"></p>
+                <p class="text">Imię (imiona)</p>
             </div>
-            <div class="data_holder">
-                <p class="data_title surname" id="surname"></p>
-                <p class="data_value">Nazwisko</p>
+            <div class="element">
+                <p class="value" id="surname"></p>
+                <p class="text">Nazwisko</p>
             </div>
-            <div class="data_holder">
-                <p class="data_title" id="nationality"></p>
-                <p class="data_value">Obywatelstwo</p>
+            <div class="element">
+                <p class="value" id="nationality"></p>
+                <p class="text">Obywatelstwo</p>
             </div>
-            <div class="data_holder">
-                <p class="data_title" id="birthday"></p>
-                <p class="data_value">Data urodzenia</p>
+            <div class="element">
+                <p class="value" id="birthday"></p>
+                <p class="text">Data urodzenia</p>
             </div>
-            <div class="data_holder">
-                <p class="data_title" id="pesel"></p>
-                <p class="data_value">Numer PESEL</p>
+            <div class="element">
+                <p class="value" id="pesel"></p>
+                <p class="text">Numer PESEL</p>
             </div>
         </div>
     </div>
-    <div class="id_bottom">
-        <div class="bottom_grid">
-            <img class="bottom_image" src="assets/images/dowod_wazny.svg">
-            <p class="bottom_text" style="color: #317C26; font-size: 17px;">Dokument ważny</p>
-        </div>
+    <div class="id_valid">
+        <img class="icon" src="assets/images/dowod_wazny.svg" loading="lazy">
+        <p class="text">Dokument ważny</p>
     </div>
-    <div class="other_grid">
-        <div class="bottom_holder" onclick="sendTo('qr')">
-            <div class="bottom_grid">
-                <img class="bottom_image" style="width: 35px;" src="assets/images/zeskanuj_kod_qr.svg">
-                <p class="bottom_text" style="color: #1f2125;">Potwierdź swoje dane</p>
+    <div class="document_info">
+        <div class="shortcuts_flex">
+            <div class="element" onclick="sendTo('qr_show')">
+                <img class="icon" src="assets/images/zeskanuj_kod_qr.svg" loading="lazy">
+                <p class="text">Potwierdź swoje dane</p>
             </div>
-            <img class="action_arrow" src="assets/images/strzalka_szara_prawo.svg">
-        </div>
-        <div class="bottom_holder" onclick="openPage(1)">
-            <div class="bottom_grid">
-                <img class="bottom_image" style="width: 35px;" src="assets/images/dane_dokumentu.png">
-                <p class="bottom_text" style="color: #1f2125;">Dane dokumentu</p>
+            <div class="element" onclick="sendTo('id_data')">
+                <img class="icon" src="assets/images/dane_dokumentu.svg" loading="lazy">
+                <p class="text">Dane dowodu osobistego</p>
             </div>
-            <img class="action_arrow" src="assets/images/strzalka_szara_prawo.svg">
-        </div>
-        <div class="bottom_holder info_holder">
-            <div class="bottom_grid">
-                <p class="bottom_text" style="color: #1f2125; margin-left: 0px;">Twoje dodatkowe dane</p>
+            <div class="element">
+                <img class="icon" src="assets/images/zastrzez_pesel_mdowod.svg" loading="lazy">
+                <p class="text">Zastrzeż PESEL</p>
             </div>
-            <img class="action_arrow" src="assets/images/strzalka_szara_prawo.svg">
-            <div class="additional_holder">
-                <div class="additional_grid">
-                    <p class="additional_title">Nazwisko rodowe</p>
-                    <p class="additional_subtitle" id="familyName"></p>
-                </div>
-                <div class="additional_grid">
-                    <p class="additional_title">Płeć</p>
-                    <p class="additional_subtitle" id="sex"></p>
-                </div>
-                <div class="additional_grid">
-                    <p class="additional_title">Nazwisko rodowe ojca</p>
-                    <p class="additional_subtitle" id="fathersFamilyName"></p>
-                </div>
-                <div class="additional_grid">
-                    <p class="additional_title">Nazwisko rodowe matki</p>
-                    <p class="additional_subtitle" id="mothersFamilyName"></p>
-                </div>
-                <div class="additional_grid">
-                    <p class="additional_title">Miejsce urodzenia</p>
-                    <p class="additional_subtitle" id="birthPlace"></p>
-                </div>
-                <div class="additional_grid">
-                    <p class="additional_title">Kraj urodzenia</p>
-                    <p class="additional_subtitle" id="countryOfBirth"></p>
-                </div>
-                <div class="additional_grid">
-                    <p class="additional_title">Adres zameldowania na pobyt stały</p>
-                    <p class="additional_subtitle" id="adress"></p>
-                </div>
-                <div class="additional_grid" style="border-bottom: none;">
-                    <p class="additional_title">Data zameldowania na pobyt stały</p>
-                    <p class="additional_subtitle home_date"></p>
-                </div>
+            <div class="element">
+                <img class="icon" src="assets/images/pozostale_skroty.svg" loading="lazy">
+                <p class="text">Pozostałe skróty</p>
             </div>
         </div>
-        <div class="bottom_holder" style="height: 90px; margin-bottom: 120px;">
-            <div class="bottom_update">
-                <div class="bottom_update_grid">
-                    <p class="bottom_update_text" style="margin-left: 0px;">Ostatnia aktualizacja</p>
-                    <p class="bottom_update_value" style="margin-left: 0px;"></p>
-                </div>
-                <button class="button update">Aktualizuj</button>
+
+        <div class="shortened_document_info">
+            <div class="element">
+                <p class="text">Seria i numer</p>
+                <p class="value_serial" id="serial_number"></p>
+                <button class="button copy">Kopiuj</button>
             </div>
+            <div class="element">
+                <p class="text">Termin ważności</p>
+                <p class="value" id="expiry_date"></p>
+            </div>
+            <div class="element">
+                <p class="text">Data wydania</p>
+                <p class="value" id="issue_date"></p>
+            </div>
+            <div class="element">
+                <p class="text">Imię ojca</p>
+                <p class="value" id="father_name"></p>
+            </div>
+            <div class="element" style="border-bottom: none;">
+                <p class="text">Imię matki</p>
+                <p class="value" id="mother_name"></p>
+            </div>
+        </div>
+
+        <div class="additional_document_info">
+            <div class="header_holder">
+                <p class="title_text">Twoje dodatkowe dane</p>
+                <img class="icon" src="assets/images/strzalka_szara_prawo.svg" loading="lazy">
+            </div>
+            <div class="additional_info_holder">
+                <div class="element">
+                    <p class="text">Nazwisko rodowe</p>
+                    <p class="value" id="familyName"></p>
+                </div>
+                <div class="element">
+                    <p class="text">Płeć</p>
+                    <p class="value" id="sex"></p>
+                </div>
+                <div class="element">
+                    <p class="text">Nazwisko rodowe ojca</p>
+                    <p class="value" id="fathersFamilyName"></p>
+                </div>
+                <div class="element">
+                    <p class="text">Nazwisko rodowe matki</p>
+                    <p class="value" id="mothersFamilyName"></p>
+                </div>
+                <div class="element">
+                    <p class="text">Miejsce urodzenia</p>
+                    <p class="value" id="birthPlace"></p>
+                </div>
+                <div class="element">
+                    <p class="text">Kraj urodzenia</p>
+                    <p class="value" id="countryOfBirth"></p>
+                </div>
+                <div class="element">
+                    <p class="text">Adres zameldowania na pobyt stały</p>
+                    <p class="value_address" id="adress"></p>
+                </div>
+                <div class="element" style="border-bottom: none;">
+                    <p class="text">Data zameldowania na pobyt stały</p>
+                    <p class="value home_date"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="last_refresh_holder">
+            <p class="text">Ostatnia aktualizacja</p>
+            <p class="value"></p>
+            <button class="button update">Aktualizuj</button>
         </div>
     </div>
     <script src="assets/bar.js"></script>

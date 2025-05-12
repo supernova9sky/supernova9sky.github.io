@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>mObywatel</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="assets/qr_show.css?v=1.0">
+  <link rel="stylesheet" href="assets/main.css">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo_appki.svg">
+  <link rel="apple-touch-icon" href="assets/images/logo_appki.svg">
+  <link rel="shortcut icon" href="assets/images/logo_appki.svg">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+  <div class="upper_bar">
+    <div class="back_holder" onclick="history.back()">
+      <img src="assets/images/wroc_strzalka.svg" class="back" loading="lazy">
+      <p class="back_title">Kod QR</p>
+    </div>
+    <p class="title">Kod QR</p>
+    <img src="assets/images/pomoc.svg" class="help" loading="lazy">
+  </div>
+
+  <div class="upper_info">
+    <p class="big_text">Pokaż kod QR osobie, której dokument sprawdzasz</p>
+    <p class="small_text">Gdy ta osoba zeskanuje lub wpisze kod, jej dane pojawią się na Twoim telefonie</p>
+  </div>
+
+  <div class="qr_block">
+    <div class="qr_contents">
+      <img id="qr_image" class="code" draggable="false" src="assets/images/kod_qr.svg" loading="lazy">
+      <p id="text_code" class="text_code">483769</p>
+      <progress id="time_left" class="qr_time_left" max="180" value="180"></progress>
+      <div class="qr_time_text_holder">
+        <p class="qr_time_left_text">Kod wygaśnie za: </p>
+        <p id="time_left_text" class="qr_time_left_value">3 min 0 sek.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="authenticity">
+    <img class="polish_flag" draggable="false" src="assets/images/flaga_polski_static.webp" loading="lazy">
+    <img class="polish_emblem" draggable="false" src="assets/images/godlo_hologram.gif" loading="lazy">
+  </div>
+
+  <div class="bottom_bar">
+    <div class="bottom_bar_grid">
+      <div class="bottom_element_grid" send="pM9exZEim1ZRS8YW">
+        <div class="bottom_element_image home"></div>
+        <p class="bottom_element_text">Pulpit</p>
+      </div>
+      <div class="bottom_element_grid" send="documents">
+        <div class="bottom_element_image documents"></div>
+        <p class="bottom_element_text">Dokumenty</p>
+      </div>
+      <div class="bottom_element_grid" send="services">
+        <div class="bottom_element_image services"></div>
+        <p class="bottom_element_text">Usługi</p>
+      </div>
+      <div class="bottom_element_grid" send="qr">
+        <div class="bottom_element_image qr_open"></div>
+        <p class="bottom_element_text open">Kod QR</p>
+      </div>
+      <div class="bottom_element_grid" send="more">
+        <div class="bottom_element_image more"></div>
+        <p class="bottom_element_text">Więcej</p>
+      </div>
+    </div>
+  </div>
+  <script src="assets/qr_show.js"></script>
+  <script src="assets/bar.js"></script>
+  <script src="assets/manifest.js"></script>
+</body>
+
+</html>

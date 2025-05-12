@@ -3,7 +3,7 @@ let webManifest = {
     "short_name": "",
     "theme_color": "#f5f6fb",
     "background_color": "#f5f6fb",
-    "display": "standalone"
+    "display": "standalone",
 };
 
 let manifestElem = document.createElement('link');
