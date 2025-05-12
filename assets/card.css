@@ -328,7 +328,7 @@ body .bottom_bar {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    align-content: center;
+    align-items: center;
 }
 
 .document_info .additional_document_info .header_holder .title_text {
@@ -341,7 +341,8 @@ body .bottom_bar {
 }
 
 .document_info .additional_document_info .header_holder .icon {
-    margin-left: 170px;
+    margin-left: auto;
+    margin-right: 15px;
     margin-top: 25px;
     transition: 200ms;
 }
