@@ -39,9 +39,9 @@ function generate_random_integers(lenght, max, min) {
 
 text_code.innerHTML = generate_random_integers(6, 9, 1);
 
-let qr_image = document.getElementById("qr_image");
+// let qr_image = document.getElementById("qr_image");
 
-qr_image.src = "assets/images/kod_qr" + generate_random_integers(1, 4, 0) + ".svg";
+// qr_image.src = "assets/images/kod_qr" + generate_random_integers(1, 4, 0) + ".svg";
 
 
 
