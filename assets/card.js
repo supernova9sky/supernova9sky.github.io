@@ -48,7 +48,8 @@ function setClock() {
 }
 
 let unfold = document.querySelector(".additional_document_info");
-unfold.addEventListener('click', () => {
+let unfold2 = document.querySelector(".header_holder");
+unfold2.addEventListener('click', () => {
   if (unfold.classList.contains("unfolded")) {
     unfold.classList.remove("unfolded");
   } else {
