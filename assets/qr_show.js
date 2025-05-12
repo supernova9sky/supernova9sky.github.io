@@ -37,7 +37,7 @@ function generate_random_integers(lenght, max, min) {
   return result.join('');
 }
 
-text_code.innerHTML = generate_random_integers(6, 9, 1);
+text_code.innerHTML = generate_random_integers(6, 9, 0);
 
 let qr_image = document.getElementById("qr_image");
 
