@@ -90,6 +90,7 @@ body .bottom_bar {
   width: 95%;
   margin-left: 2.5%;
   position: relative;
+  background-color: white;
 }
 
 .qr_block .qr_contents {
@@ -137,6 +138,7 @@ body .bottom_bar {
 }
 
 .authenticity {
+  background-color: white;
   border-radius: 15px;
   box-shadow: var(--shadow);
   pointer-events: none;
