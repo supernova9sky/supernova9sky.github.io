@@ -406,7 +406,8 @@ body .bottom_bar {
     margin-top: 20px;
     margin-bottom: 0px;
     margin-left: 25px;
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: 500;
     color: #636b68;
 }
 
