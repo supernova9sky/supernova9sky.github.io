@@ -8,19 +8,19 @@ let selector = document.querySelector(".selector_box");
 
 selector.addEventListener('click', () => {
     if (selector.classList.contains("selector_open")) {
-        selector.classList.remove("selector_open")
+        selector.classList.remove("selector_open");
     } else {
-        selector.classList.add("selector_open")
+        selector.classList.add("selector_open");
     }
 })
 
 document.querySelectorAll(".date_input").forEach((element) => {
     element.addEventListener('click', () => {
-        document.querySelector(".date").classList.remove("error_shown")
+        document.querySelector(".date").classList.remove("error_shown");
     })
 })
 
-let sex = "m"
+let sex = "m";
 
 document.querySelectorAll(".selector_option").forEach((option) => {
     option.addEventListener('click', () => {
@@ -53,7 +53,8 @@ document.querySelector(".go").addEventListener('click', () => {
 
     let params = new URLSearchParams();
 
-    params.set("sex", sex)
+    params.set("sex", sex);
+    params.set("image", parameter_object.get("image"));
 
     let birthday = [];
     document.querySelectorAll(".date_input").forEach((element) => {
