@@ -55,13 +55,21 @@ function generate_pesel(day, month, year, sex) {
   const year_last_two_nums = year.toString().substring(2, 4);
   const calculated_month = get_pesel_month(year, month); 
   let random_num = generate_random_integers(3, 9, 0);
+  let calculated_day = "";
+
   if (sex === "Mężczyzna") {
     random_num += "5";
   } else {
     random_num += "0";
   }
 
-  return add_checksum(`${year_last_two_nums}${calculated_month}${day}${random_num}`);
+  if ((day < 9) && (day >= 0)) {
+    calculated_day = `0${day}`;
+  } else {
+    calculated_day = `${day}`;
+  }
+
+  return add_checksum(`${year_last_two_nums}${calculated_month}${calculated_day}${random_num}`);
 }
 
 let options = { year: 'numeric', month: '2-digit', day: '2-digit' };
