@@ -7,8 +7,61 @@ function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
 
-function generate_pesel(year, month, day, sex) {
+function generate_random_integers(lenght, max, min) {
+  let result = [];
+
+  for (let i = 0; i < lenght; ++i) {
+    result.push(Math.floor(Math.random() * max) + min);
+  }
+
+  return result.join('');
+}
+
+function get_pesel_month(year, month) {
+  if ((year >= 1900) && (year <= 1999)) {
+    return ++month;
+  } else if ((year >= 2000) && (year <= 2099)) {
+    if (month > 9) {
+      return 30 + (10 - ++month);
+    }
+    return 20 + ++month;
+  }
+}
+
+function add_checksum(almost_full_pesel) {
+  if (almost_full_pesel.lenght > 10) {
+    return "ERR: TOO LONG PESEL";
+  }
+
+  const sum = (...args) => args.reduce((curr, prev) => curr + prev);
+
+  let weights = [1, 3, 7, 9, 1, 3, 7, 9, 1, 3];
+  let calculated = [];
   
+  for (let i = 0; i < 10; ++i) {
+    calculated.push(parseInt((parseInt(almost_full_pesel[i]) * weights[i]).toString().slice(-1)));
+  }
+
+  let summed = calculated.reduce((acc, curr) => {
+    return acc + curr;
+  }, 0);
+  let moduloed = summed % 10;
+  let control = moduloed === 0 ? 0 : 10 - moduloed;
+
+  return almost_full_pesel + control.toString();
+}
+
+function generate_pesel(day, month, year, sex) {
+  const year_last_two_nums = year.toString().substring(2, 4);
+  const calculated_month = get_pesel_month(year, month); 
+  let random_num = generate_random_integers(3, 9, 0);
+  if (sex === "Mężczyzna") {
+    random_num += "5";
+  } else {
+    random_num += "0";
+  }
+
+  return add_checksum(`${year_last_two_nums}${calculated_month}${day}${random_num}`);
 }
 
 let options = { year: 'numeric', month: '2-digit', day: '2-digit' };
@@ -79,15 +132,6 @@ home_date_obj.setFullYear(home_year);
 birthday = birthdayDate.toLocaleDateString("pl-PL", options);
 document.querySelector(".home_date").innerHTML = home_date_obj.toLocaleDateString("pl-PL", options);
 
-
-// if (birth_day < 9) {
-//   birthday = "0" + birthday;
-// }
-
-// if (home_day < 9) {
-//   document.querySelector(".home_date").innerHTML = "0" + document.querySelector(".home_date").innerHTML;
-// }
-
 let sex = data['sex'];
 
 if (sex === "m") {
@@ -96,7 +140,12 @@ if (sex === "m") {
   sex = "Kobieta"
 }
 
-let pesel = generate_pesel();
+let pesel = localStorage.getItem("pesel");
+if (pesel == null) {
+  pesel = generate_pesel(birth_day, birth_month - 1, birth_year, sex);
+  localStorage.setItem("pesel", pesel);
+}
+
 
 set_data("name", data['name'].toUpperCase());
 set_data("surname", data['surname'].toUpperCase());
@@ -115,35 +164,3 @@ set_data("issue_date", data["issue_date"]);
 set_data("father_name", data["father_name"].toUpperCase());
 set_data("mother_name", data["mother_name"].toUpperCase());
 set_data("pesel", pesel);
-
-// setData("issuing_authority", data["issuing_authority"].toUpperCase());
-// setData("issuing_authority2", data["issuing_authority"].toUpperCase());
-// setData("expiry_date2", data["expiry_date"]);
-
-
-// if (parseInt(year) >= 2000) {
-//   month = 20 + month;
-// }
-
-// let later;
-
-// if (sex.toLowerCase() === "mężczyzna") {
-//   later = "0295"
-// } else {
-//   later = "0382"
-// }
-
-// if (day < 10) {
-//   day = "0" + day
-// }
-
-// if (month < 10) {
-//   month = "0" + month
-// }
-
-// let pesel = year.toString().substring(2) + month + day + later + "7";
-// setData("pesel", pesel)
-
-// function getRandom(min, max) {
-//   return parseInt(Math.random() * (max - min) + min);
-// }
