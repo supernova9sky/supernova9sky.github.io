@@ -24,7 +24,7 @@ body .bottom_bar {
   flex-flow: row nowrap;
   width: 100%;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center; 
   align-content: center;
 }
 
